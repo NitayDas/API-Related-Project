@@ -45,6 +45,8 @@ displayPhone = phones =>{
         phonecontainer.appendChild(phoneCard);
 
     });
+
+    Loadspinner(false);
 }
 
 loadphone('iphone');
@@ -55,8 +57,24 @@ const Handlersearch=()=>{
     const SearchInputField=document.getElementById('search-input');
     const phonename = SearchInputField.value;
     SearchInputField.value='';
+
+    Loadspinner(true);
    
     loadphone(phonename);
 
     console.log(phonename);
+}
+
+const Loadspinner =(isTrue)=>{
+
+    const loadSpinner = document.getElementById("load-spinner");
+    if(isTrue)
+        {
+            loadSpinner.classList.remove('hidden');  
+        }
+
+    else 
+    {
+        loadSpinner.classList.add('hidden');
+    }
 }
