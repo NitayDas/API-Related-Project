@@ -12,12 +12,19 @@
     
     <main class="container mx-auto mt-10">
         <h2 class="text-3xl text-center font-semibold">Hunting Phone Info</h2>
-
+        <!-- search field -->
         <section class="mt-10">
-                 <div>
-                    <input type="text" placeholder="search" class="input input-bordered w-full max-w-xs">
+                 <div class="bg-sky-100 p-4 m-2 rounded-lg">
+                    <input type="text" id="search-input" placeholder="search" class="input input-bordered w-full max-w-xs">
+                    <button onclick=" Handlersearch()" class="btn btn-accent text-white">search</button>
                  </div>
         </section>
+        <!-- show-result -->
+        <section class="mt-10">
+            <div id="show-result" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+            </div>
+      </section>
+       <!-- show all phonelist -->
         <section class ="mt-10">
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             </div>
