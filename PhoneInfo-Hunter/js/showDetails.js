@@ -16,11 +16,11 @@ const showPhoneDetails=(details)=>{
                                     <div class="card-body my-2">
                                         <h2 class="text-lg font-medium"><span class="font-bold">Name :</span> ${details.name}</h2>
                                         <p class="text-lg font-medium"><span class="font-bold">Brand :</span> ${details.brand}</p>
-                                        <p class="text-lg font-medium"><span class="font-bold">Chipset :</span> ${details.mainFeatures.chipSet}</p>
-                                        <p class="text-lg font-medium"><span class="font-bold">DisplaySize: </span> ${details.mainFeatures.displaySize}</p>
-                                        <p class="text-lg font-medium"><span class="font-bold">Memory : </span>${details.mainFeatures.memory}</p>
-                                        <p class="text-lg font-medium"><span class="font-bold">Storage : </span>${details.mainFeatures.storage}</p>
+                                        <p class="text-lg font-medium"><span class="font-bold">Chipset :</span> ${details.mainFeatures?.chipSet || 'no chipsets'}</p>
+                                        <p class="text-lg font-medium"><span class="font-bold">DisplaySize: </span> ${details.mainFeatures?.displaySize || 'no display'}</p>
+                                        <p class="text-lg font-medium"><span class="font-bold">Memory : </span>${details.mainFeatures?.memory || 'no memory'}</p>
+                                        <p class="text-lg font-medium"><span class="font-bold">Storage : </span>${details.mainFeatures?.storage || 'no storage'}</p>
                                     </div>`;
 
-    show_phone_modal.showModal()
+    show_phone_modal.showModal();
   }
