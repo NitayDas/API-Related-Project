@@ -5,6 +5,7 @@ const loadphone = async (searchText,isshowall) =>{
     const data= await res.json();
 
     const phones =data.data;
+    console.log(phones);
 
     displayPhone(phones,isshowall);
 }
@@ -32,14 +33,14 @@ displayPhone = (phones,isshowall) =>{
     phones.forEach(phone => {
 
         const phoneCard=document.createElement('div');
-        phoneCard.classList=`card p-4 bg-base-100 shadow-xl`;
+        phoneCard.classList=`card p-4 bg-base-100 shadow-xl text-center`;
 
        phoneCard.innerHTML=`<figure><img src="${phone.image}" alt="Shoes" /></figure>
-                            <div class="card-body">
-                                <h2 class="card-title">${phone.phone_name}</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Buy Now</button>
+                            <div class="card-body my-2">
+                                <h2 class="text-2xl font-medium">${phone.phone_name}</h2>
+                                <p class="text-lg font-medium">${phone.brand}</p>
+                                <div class="mt-2">
+                                <button onclick="showdetails('${phone.slug}')" class="btn bg-amber-500 text-white text-sm">show details</button>
                                 </div>
                             </div>`;
                                  
@@ -58,7 +59,7 @@ loadphone('iphone');
 const Handlersearch=(isshowall)=>{
     const SearchInputField=document.getElementById('search-input');
     const phonename = SearchInputField.value;
-    
+
     Loadspinner(true);
    
     loadphone(phonename,isshowall);

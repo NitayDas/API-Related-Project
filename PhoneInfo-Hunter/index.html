@@ -11,7 +11,7 @@
     
     
     <main class="container mx-auto mt-10 ml-8">
-        <h2 class="text-3xl text-center font-semibold">Hunting Phone Info</h2>
+        <h2 class="text-3xl text-center font-semibold">Hunting <span class="text-sky-500">Phone</span> Info</h2>
         <!-- search field -->
         <section class="mt-10">
                  <div class="bg-sky-100 p-4 m-2 rounded-lg">
@@ -29,12 +29,32 @@
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             </div>
 
-            <div class="mt-4 hidden " id="showAll-container">
+            <div class="my-8 hidden text-center " id="showAll-container">
                 <button onclick="showAll()" class="btn btn-accent text-white ">show more</button>
             </div>
+        </section>
+
+
+        <!-- adding modal -->
+        <section>
+            <button class="btn btn-info" onclick="show_phone_modal.showModal()">open modal</button>
+            <dialog id="show_phone_modal" class="modal">
+            <div class="modal-box">
+                 <div id="show_details_container">
+                  
+                 </div>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
         </section>
     </main>
     
     <script src="js/index.js"></script>
+    <script src="js/showDetails.js"></script>
 </body>
 </html>
