@@ -10,7 +10,7 @@
 <body>
     
     
-    <main class="container mx-auto mt-10">
+    <main class="container mx-auto mt-10 ml-8">
         <h2 class="text-3xl text-center font-semibold">Hunting Phone Info</h2>
         <!-- search field -->
         <section class="mt-10">
@@ -19,14 +19,13 @@
                     <button onclick=" Handlersearch()" class="btn btn-accent text-white">search</button>
                  </div>
         </section>
-        <!-- show-result -->
-        <section class="mt-10">
-            <div id="show-result" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            </div>
-      </section>
        <!-- show all phonelist -->
         <section class ="mt-10">
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+            </div>
+
+            <div class="mt-4 hidden " id="showAll-container">
+                <button onclick=" Handlersearch()" class="btn btn-accent text-white ">show more</button>
             </div>
         </section>
     </main>
